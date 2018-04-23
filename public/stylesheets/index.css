@@ -1,0 +1,19 @@
+body {
+  background: url(../images/cloth.png) repeat 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gugi', cursive;
+  text-shadow: 1px 1px 1px black;
+}
+
+p {
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.example {
+  text-indent: 2%;
+  margin-top: 2%;
+  padding: 5px;
+  box-shadow: 0 0 1em 1em black;
+}

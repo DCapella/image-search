@@ -1,0 +1,30 @@
+{
+  "name": "image-search",
+  "version": "1.0.0",
+  "description": "A node app that allows user to search for images.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCapella/image-search.git"
+  },
+  "author": "David Capella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCapella/image-search/issues"
+  },
+  "homepage": "https://github.com/DCapella/image-search#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "google-images": "^2.1.0",
+    "mongodb": "^3.0.7",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
