@@ -1,6 +1,6 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
-const dbUrl = require('./config/db').url || config.url;
+const dbUrl = require('./config/db').url || process.env.url;
 const path = require('path');
 
 const app = express();

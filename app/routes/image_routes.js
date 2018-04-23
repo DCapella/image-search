@@ -1,7 +1,7 @@
 const GoogleImages = require('google-images');
 const utils = require('../library/utils');
-const CSE_ID = require('../../config/googleInfo.js').CSE_ID || config.CSE_ID;
-const API_KEY = require('../../config/googleInfo.js').API_KEY || config.API_KEY;
+const CSE_ID = require('../../config/googleInfo.js').CSE_ID || proces.env.CSE_ID;
+const API_KEY = require('../../config/googleInfo.js').API_KEY || process.env.API_KEY;
 
 const client = new GoogleImages(CSE_ID, API_KEY);
 
