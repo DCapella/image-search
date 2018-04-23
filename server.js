@@ -1,6 +1,6 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
-const db = require('./config/db');
+const dbUrl = require('./config/db').url || config.url;
 const path = require('path');
 
 const app = express();
@@ -9,7 +9,7 @@ const port = process.env.PORT || 8000;
 
 app.use(express.static(path.join(__dirname, '/public')));
 
-MongoClient.connect(db.url, (err, client) => {
+MongoClient.connect(dbUrl, (err, client) => {
   if (err) return console.error(err);
   const database = client.db('image-search-api');
   require('./app/routes')(app, database);

@@ -1,8 +1,9 @@
 const GoogleImages = require('google-images');
 const utils = require('../library/utils');
-const GI = require('../../config/googleInfo.js');
+const CSE_ID = require('../../config/googleInfo.js').CSE_ID || config.CSE_ID;
+const API_KEY = require('../../config/googleInfo.js').API_KEY || config.API_KEY;
 
-const client = new GoogleImages(GI.CSE_ID, GI.API_KEY);
+const client = new GoogleImages(CSE_ID, API_KEY);
 
 module.exports = function(app, db) {
   const collection = db.collection('recents');
@@ -11,7 +12,7 @@ module.exports = function(app, db) {
   app.get('/', (req, res) => {
     res.sendFile('index.html', {
       root: './public/views'
-    }); 
+    });
   });
 
   app.get('/recents', (req, res) => {
